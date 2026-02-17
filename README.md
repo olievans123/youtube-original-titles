@@ -1,8 +1,6 @@
-# YouTube Original Titles
+# YouTube Original Titles for Safari
 
 Safari extension that restores original (untranslated) video titles on YouTube. When YouTube auto-translates titles to your browser's language, this extension fetches the original title via the oEmbed API and replaces it.
-
-![Screenshot](screenshot.png)
 
 ## Features
 
