@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Original Titles",
+  "version": "1.0",
+  "description": "Shows original untranslated YouTube video titles",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Original Titles",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "icons": {
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"]
+    }
+  ]
+}
